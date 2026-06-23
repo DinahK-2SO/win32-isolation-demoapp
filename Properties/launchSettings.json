@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Win32IsolationDemoApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Win32IsolationDemoApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
