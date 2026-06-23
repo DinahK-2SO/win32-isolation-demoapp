@@ -24,6 +24,11 @@ namespace Win32IsolationDemoApp
         private Window? _window;
 
         /// <summary>
+        /// Gets the id of the application's main window.
+        /// </summary>
+        public static Microsoft.UI.WindowId MainWindowId { get; private set; }
+
+        /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
@@ -39,6 +44,7 @@ namespace Win32IsolationDemoApp
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             _window = new MainWindow();
+            MainWindowId = _window.AppWindow.Id;
             _window.Activate();
         }
     }
